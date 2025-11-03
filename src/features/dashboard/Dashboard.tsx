@@ -26,7 +26,7 @@ const MACRO_COLORS = ["#ef4444", "#3b82f6", "#10b981"];
 
 function Dashboard() {
   const user = useUserContext();
-  const { addCalorieEntry } = user;
+
   const caloriesToday =
     user?.calorieHistory[user.calorieHistory.length - 1].caloriesToday;
 
