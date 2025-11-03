@@ -4,7 +4,7 @@ A clean nutrition & sustainability logger where you search or describe meals, sa
 
 ## Overview
 
-GreenBites is a comprehensive nutrition tracking application that combines health monitoring with environmental consciousness. Users can log their meals through natural language descriptions, track nutritional information, and visualize their carbon footprint impact. The app helps users make informed decisions about their food choices by providing real-time feedback on both health metrics and environmental sustainability.
+GreenBites is a comprehensive nutrition tracking application that combines health monitoring with environmental consciousness. Users can log their meals through natural language descriptions, track nutritional information, and visualize their carbon footprint impact.
 
 ## Problem Statement
 
@@ -28,20 +28,20 @@ Many people want to eat healthier and reduce their environmental impact, but lac
 
 ## Technical Stack
 
-| Layer | Technology | Justification |
-|-------|------------|---------------|
-| Frontend | React + TypeScript | Type safety, component reusability, and modern development experience |
-| Styling | Tailwind CSS | Utility-first CSS framework for rapid, consistent UI development |
-| Type Safety | TypeScript | Enhanced developer experience and runtime error prevention |
-| State Management | React Context + useReducer | Built-in React patterns for predictable state management |
-| Backend | Next.js API Routes | Full-stack TypeScript with serverless deployment capabilities |
-| Database | PostgreSQL + Drizzle ORM | Relational data with type-safe queries and migrations |
-| Authentication | Clerk | Secure, scalable authentication with social login options |
-| AI Integration | OpenAI API | Natural language processing for meal parsing and carbon classification |
-| External APIs | USDA/Nutritionix | Comprehensive nutrition data for accurate food tracking |
-| Deployment | AWS (Vercel/Netlify) | Serverless deployment with automatic scaling |
-| Testing | Vitest + React Testing Library | Fast unit and integration testing with 70%+ coverage |
-| CI/CD | GitHub Actions | Automated testing, building, and deployment pipeline |
+| Layer            | Technology                     | Justification                                                          |
+| ---------------- | ------------------------------ | ---------------------------------------------------------------------- |
+| Frontend         | React + TypeScript             | Type safety, component reusability, and modern development experience  |
+| Styling          | Tailwind CSS                   | Utility-first CSS framework for rapid, consistent UI development       |
+| Type Safety      | TypeScript                     | Enhanced developer experience and runtime error prevention             |
+| State Management | React Context + useReducer     | Built-in React patterns for predictable state management               |
+| Backend          | Next.js API Routes             | Full-stack TypeScript with serverless deployment capabilities          |
+| Database         | PostgreSQL + Drizzle ORM       | Relational data with type-safe queries and migrations                  |
+| Authentication   | Clerk                          | Secure, scalable authentication with social login options              |
+| AI Integration   | OpenAI API                     | Natural language processing for meal parsing and carbon classification |
+| External APIs    | USDA/Nutritionix               | Comprehensive nutrition data for accurate food tracking                |
+| Deployment       | AWS (Vercel/Netlify)           | Serverless deployment with automatic scaling                           |
+| Testing          | Vitest + React Testing Library | Fast unit and integration testing with 70%+ coverage                   |
+| CI/CD            | GitHub Actions                 | Automated testing, building, and deployment pipeline                   |
 
 ## Project Timeline
 
@@ -58,7 +58,7 @@ Many people want to eat healthier and reduce their environmental impact, but lac
 
 ## Getting Started
 
-*Note: This setup guide reflects the current state of the project and will be updated as we add more features and integrations.*
+_Note: This setup guide reflects the current state of the project and will be updated as we add more features and integrations._
 
 ### Prerequisites
 
@@ -67,17 +67,20 @@ Many people want to eat healthier and reduce their environmental impact, but lac
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/greenbites.git
 cd greenbites
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -87,6 +90,7 @@ npm run dev
 ### Current Features
 
 The project currently includes:
+
 - Basic React + TypeScript + Vite setup
 - Tailwind CSS for styling
 - ESLint configuration
@@ -97,6 +101,7 @@ The project currently includes:
 ### Upcoming Integrations
 
 As development progresses, we will add:
+
 - PostgreSQL database with Drizzle ORM
 - Clerk authentication setup
 - OpenAI API integration
@@ -152,6 +157,7 @@ For bug reports or feature requests, please use the GitHub Issues tab.
 ## Author
 
 **[Your Name]**
+
 - GitHub: [Your GitHub profile]
 - LinkedIn: [Your LinkedIn profile]
 
