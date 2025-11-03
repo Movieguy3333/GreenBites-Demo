@@ -1,5 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-
 export type MealLog = {
   name: string;
   date: string;
