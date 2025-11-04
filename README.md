@@ -1,171 +1,411 @@
-# GreenBites
+<div align="center">
 
-A clean nutrition & sustainability logger where you search or describe meals, save entries, and see how your choices impact health and carbon footprint.
+# 🌱 GreenBites
 
-## Overview
+**Nourish Yourself. Heal the Planet.**
 
-GreenBites is a comprehensive nutrition tracking application that combines health monitoring with environmental consciousness. Users can log their meals through natural language descriptions, track nutritional information, and visualize their carbon footprint impact.
+A modern nutrition tracking application that combines health monitoring with environmental consciousness. Track your meals, visualize your carbon footprint, and make smarter, sustainable food choices.
 
-## Problem Statement
+[![Next.js](https://img.shields.io/badge/Next.js-15.0-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
 
-Many people want to eat healthier and reduce their environmental impact, but lack the tools to easily track and understand the relationship between their food choices and both personal health and carbon emissions. Existing nutrition apps focus solely on calories and macros, while environmental apps don't connect to personal eating habits. GreenBites bridges this gap by providing an integrated platform that makes sustainable eating accessible and actionable.
+[Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Project Structure](#-project-structure) • [Contributing](#-contributing)
 
-## Target Users
+</div>
 
-- **Health-conscious individuals** who want to track nutrition while considering environmental impact
-- **Eco-conscious consumers** looking to reduce their carbon footprint through food choices
-- **Fitness enthusiasts** who want comprehensive tracking including sustainability metrics
-- **Families** seeking to make more informed food decisions for health and environmental reasons
+---
 
-## Core Features (MVP)
+## 📖 Overview
 
-- [ ] **Food Search & Logging** - Integration with USDA/Nutritionix APIs for comprehensive nutrition data
-- [ ] **Natural Language Meal Logging** - OpenAI-powered parsing of meal descriptions like "2 eggs and toast"
-- [ ] **Carbon Footprint Tracking** - Real-time calculation of CO₂e emissions based on food categories
-- [ ] **Interactive Dashboards** - Visual rings showing daily/weekly progress on calories, macros, and CO₂e
-- [ ] **Favorites & Meal Templates** - Quick-add common meals and customizable meal templates
-- [ ] **User Profiles & Goals** - Personalized targets for nutrition and environmental impact
+GreenBites is a comprehensive nutrition tracking application that bridges the gap between personal health and environmental impact. Unlike traditional nutrition apps that focus solely on calories and macros, GreenBites empowers users to understand how their food choices affect both their well-being and the planet's health.
 
-## Technical Stack
+### The Problem We're Solving
 
-| Layer            | Technology                     | Justification                                                          |
-| ---------------- | ------------------------------ | ---------------------------------------------------------------------- |
-| Frontend         | React + TypeScript             | Type safety, component reusability, and modern development experience  |
-| Styling          | Tailwind CSS                   | Utility-first CSS framework for rapid, consistent UI development       |
-| Type Safety      | TypeScript                     | Enhanced developer experience and runtime error prevention             |
-| State Management | React Context + useReducer     | Built-in React patterns for predictable state management               |
-| Backend          | Next.js API Routes             | Full-stack TypeScript with serverless deployment capabilities          |
-| Database         | PostgreSQL + Drizzle ORM       | Relational data with type-safe queries and migrations                  |
-| Authentication   | Clerk                          | Secure, scalable authentication with social login options              |
-| AI Integration   | OpenAI API                     | Natural language processing for meal parsing and carbon classification |
-| External APIs    | USDA/Nutritionix               | Comprehensive nutrition data for accurate food tracking                |
-| Deployment       | AWS (Vercel/Netlify)           | Serverless deployment with automatic scaling                           |
-| Testing          | Vitest + React Testing Library | Fast unit and integration testing with 70%+ coverage                   |
-| CI/CD            | GitHub Actions                 | Automated testing, building, and deployment pipeline                   |
+Many people want to eat healthier and reduce their environmental impact, but lack the tools to easily track and understand the relationship between their food choices and both personal health and carbon emissions. GreenBites bridges this gap by providing an integrated platform that makes sustainable eating accessible and actionable.
 
-## Project Timeline
+### Key Differentiators
 
-- **Week 1**: Project setup, authentication integration, and basic UI components
-- **Week 2**: Food search functionality and nutrition API integration
-- **Week 3**: Natural language meal logging with OpenAI integration
-- **Week 4**: Carbon footprint calculation and lookup table implementation
-- **Week 5**: Dashboard components and data visualization
-- **Week 6**: User profiles, goals, and preferences system
-- **Week 7**: Favorites and meal templates functionality
-- **Week 8**: Database schema optimization and performance improvements
-- **Week 9**: Advanced features and mobile responsiveness
-- **Week 10**: Testing, documentation, and production deployment
+- 🌍 **Carbon Footprint Tracking** - Real-time CO₂e emissions calculation for every meal
+- 🤖 **AI-Powered Meal Logging** - Natural language processing for intuitive meal entry
+- 📊 **Visual Analytics** - Beautiful dashboards showing nutrition and environmental impact
+- 🎯 **Personalized Goals** - Customizable targets for nutrition and sustainability
+- 💚 **Eco-Friendly Recommendations** - Smart suggestions for greener alternatives
 
-## Getting Started
+---
 
-_Note: This setup guide reflects the current state of the project and will be updated as we add more features and integrations._
+## ✨ Features
+
+### Core Features (MVP)
+
+- [x] **User Authentication** - Secure login and signup with Clerk
+- [x] **Responsive UI** - Modern, mobile-first design with Tailwind CSS
+- [x] **Meal Logging** - Add and track meals with detailed information
+- [ ] **Food Search & API Integration** - Integration with USDA/Nutritionix APIs
+- [ ] **Natural Language Processing** - OpenAI-powered meal parsing from descriptions
+- [ ] **Carbon Footprint Calculation** - Real-time CO₂e emissions tracking
+- [ ] **Interactive Dashboards** - Visual progress rings for calories, macros, and CO₂e
+- [ ] **Favorites & Meal Templates** - Quick-add common meals and templates
+- [ ] **User Profiles & Goals** - Personalized nutrition and sustainability targets
+
+### Planned Features
+
+- 📱 Mobile app (React Native)
+- 🔔 Notifications and reminders
+- 👥 Social features and challenges
+- 🏆 Achievement system
+- 📈 Advanced analytics and insights
+- 🌐 Multi-language support
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+| Technology        | Version | Purpose                              |
+| ----------------- | ------- | ------------------------------------ |
+| **Next.js**       | 15.0    | React framework with App Router      |
+| **React**         | 19.1    | UI library                           |
+| **TypeScript**    | 5.8     | Type safety and developer experience |
+| **Tailwind CSS**  | 3.4     | Utility-first CSS framework          |
+| **Redux Toolkit** | 2.9     | State management                     |
+| **Lucide React**  | 0.544   | Icon library                         |
+| **Recharts**      | 3.2     | Data visualization                   |
+
+### Backend & Database
+
+| Technology             | Version | Purpose                            |
+| ---------------------- | ------- | ---------------------------------- |
+| **Next.js API Routes** | 15.0    | Serverless API endpoints           |
+| **PostgreSQL**         | 16      | Relational database                |
+| **Drizzle ORM**        | 0.44    | Type-safe database queries         |
+| **Express**            | 5.1     | Server framework (for test server) |
+
+### Authentication & External Services
+
+| Service              | Purpose                            |
+| -------------------- | ---------------------------------- |
+| **Clerk**            | Authentication and user management |
+| **OpenAI API**       | Natural language meal parsing      |
+| **USDA/Nutritionix** | Nutrition data APIs                |
+
+### Development Tools
+
+- **ESLint** - Code linting
+- **TypeScript ESLint** - TypeScript-specific linting
+- **PostCSS** - CSS processing
+- **Drizzle Kit** - Database migrations
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ and npm
+Before you begin, ensure you have the following installed:
+
+- **Node.js** 18+ ([Download](https://nodejs.org/))
+- **npm** or **yarn** package manager
+- **PostgreSQL** 14+ ([Download](https://www.postgresql.org/download/))
+- **Git** ([Download](https://git-scm.com/))
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/yourusername/greenbites.git
 cd greenbites
 ```
 
-2. Install dependencies:
+2. **Install dependencies**
 
 ```bash
 npm install
 ```
 
-3. Start the development server:
+3. **Set up environment variables**
+
+Create a `.env.local` file in the root directory:
+
+```env
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/greenbites
+
+# OpenAI (for meal parsing)
+OPENAI_API_KEY=your_openai_api_key
+
+# Nutrition API (USDA or Nutritionix)
+NUTRITION_API_KEY=your_nutrition_api_key
+```
+
+4. **Set up the database**
+
+```bash
+# Run migrations
+npm run db:migrate
+
+# (Optional) Seed the database
+npm run db:seed
+```
+
+5. **Start the development server**
 
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+6. **Open your browser**
 
-### Current Features
+Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-The project currently includes:
+### First-Time Setup Guide
 
-- Basic React + TypeScript + Vite setup
-- Tailwind CSS for styling
-- ESLint configuration
-- Basic authentication components (SignIn/SignUp)
-- Header and HomePage components
-- Project structure with organized components and features
+For detailed setup instructions, see:
 
-### Upcoming Integrations
+- [Clerk Setup Guide](./CLERK_SETUP.md)
+- [Clerk Quickstart](./CLERK_QUICKSTART.md)
 
-As development progresses, we will add:
+---
 
-- PostgreSQL database with Drizzle ORM
-- Clerk authentication setup
-- OpenAI API integration
-- USDA/Nutritionix API integration
-- Carbon footprint tracking
-- User dashboards and analytics
+## 📁 Project Structure
 
-## Development Process
+```
+greenbites/
+├── app/                      # Next.js App Router pages
+│   ├── _components/         # Shared components
+│   │   ├── Header.tsx
+│   │   └── HomePage.tsx
+│   ├── add-meal/            # Meal logging page
+│   ├── dashboard/           # User dashboard
+│   ├── login/               # Authentication pages
+│   ├── sign-up/
+│   ├── profile/             # User profile page
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Home page
+│
+├── src/                     # Source code
+│   ├── components/          # React components
+│   │   └── auth/           # Authentication components
+│   ├── context/            # React Context providers
+│   ├── features/           # Feature-based modules
+│   │   ├── dashboard/      # Dashboard feature
+│   │   ├── meal/           # Meal management
+│   │   └── ui/             # UI components
+│   └── store/              # Redux store
+│       ├── store.ts
+│       └── userSlice.ts
+│
+├── docs/                    # Documentation
+│   ├── decisions/          # Architecture Decision Records
+│   ├── planning/           # Project planning docs
+│   └── techinical/         # Technical documentation
+│
+├── public/                  # Static assets
+├── drizzle.config.ts       # Drizzle ORM configuration
+├── middleware.ts           # Next.js middleware
+├── next.config.mjs         # Next.js configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+└── tsconfig.json           # TypeScript configuration
+```
 
-Our development workflow follows these principles:
+---
 
-1. **Feature-driven development** - Each feature is developed in isolation with comprehensive testing
-2. **Test-driven development** - Write tests before implementing features to ensure reliability
-3. **Continuous integration** - All changes are automatically tested and validated
-4. **Code reviews** - All pull requests require review before merging
-5. **Documentation-first** - Update documentation alongside code changes
+## 🎯 Available Scripts
 
-### Available Scripts
+| Script               | Description                           |
+| -------------------- | ------------------------------------- |
+| `npm run dev`        | Start development server on port 3000 |
+| `npm run build`      | Build the application for production  |
+| `npm run start`      | Start production server               |
+| `npm run lint`       | Run ESLint to check code quality      |
+| `npm run db:migrate` | Run database migrations               |
+| `npm run db:seed`    | Seed database with initial data       |
+| `npm run db:studio`  | Open Drizzle Studio (database GUI)    |
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run test` - Run test suite
-- `npm run test:coverage` - Run tests with coverage report
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
-- `npm run db:migrate` - Run database migrations
-- `npm run db:seed` - Seed database with initial data
+---
 
-## Architecture Decisions
+## 🏗 Architecture
 
-See [docs/decisions](./docs/decisions) for detailed technical decisions.
+GreenBites follows a modern, scalable architecture:
 
-## Contributing
+- **App Router** - Next.js 15 App Router for file-based routing
+- **Feature-Based Structure** - Organized by features for better maintainability
+- **Type-Safe** - Full TypeScript coverage with strict mode
+- **Component-Driven** - Reusable, composable React components
+- **Serverless** - API routes for scalable backend functionality
 
-We welcome contributions! Please follow these guidelines:
+For detailed architecture documentation, see [docs/techinical/architecture.md](./docs/techinical/architecture.md).
 
-1. Fork the repository and create a feature branch
-2. Make your changes with appropriate tests
-3. Ensure all tests pass and coverage remains above 70%
-4. Update documentation as needed
-5. Submit a pull request with a clear description
+---
 
-For bug reports or feature requests, please use the GitHub Issues tab.
+## 🔐 Authentication
 
-## Learning Goals
+GreenBites uses [Clerk](https://clerk.com/) for authentication, providing:
 
-- [ ] Master full-stack TypeScript development with React and Next.js
-- [ ] Implement AI integration for natural language processing
-- [ ] Build comprehensive testing strategies with high coverage
-- [ ] Design scalable database schemas with Drizzle ORM
-- [ ] Create engaging data visualizations for user insights
+- 🔒 Secure user authentication
+- 📧 Email/password and social logins
+- 👤 User management
+- 🛡️ Session management
 
-## Author
+See [CLERK_SETUP.md](./CLERK_SETUP.md) for setup instructions.
 
-**[Your Name]**
+---
 
-- GitHub: [Your GitHub profile]
-- LinkedIn: [Your LinkedIn profile]
+## 🗄 Database Schema
 
-## License
+The application uses PostgreSQL with Drizzle ORM. Key tables include:
+
+- **Users** - User profiles and preferences
+- **Meals** - Meal entries with nutrition data
+- **CarbonFootprint** - Environmental impact tracking
+- **Goals** - User nutrition and sustainability goals
+
+Database migrations are managed with Drizzle Kit.
+
+---
+
+## 🧪 Testing
+
+```bash
+# Run tests (when implemented)
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+**Target Coverage**: 70%+ (planned)
+
+---
+
+## 📝 Development Guidelines
+
+### Code Style
+
+- Follow ESLint rules
+- Use TypeScript for all new code
+- Follow React best practices
+- Write self-documenting code with clear variable names
+
+### Git Workflow
+
+1. Create a feature branch from `main`
+2. Make your changes with tests
+3. Ensure all tests pass
+4. Update documentation
+5. Submit a pull request
+
+### Commit Messages
+
+Follow conventional commits:
+
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation changes
+- `style:` Code style changes
+- `refactor:` Code refactoring
+- `test:` Test additions/changes
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Make your changes** with appropriate tests
+4. **Ensure all tests pass** and coverage remains above 70%
+5. **Update documentation** as needed
+6. **Commit your changes** (`git commit -m 'feat: Add amazing feature'`)
+7. **Push to the branch** (`git push origin feature/amazing-feature`)
+8. **Open a Pull Request**
+
+### Reporting Issues
+
+Found a bug? Have a feature request? Please open an issue on GitHub with:
+
+- Clear description of the problem
+- Steps to reproduce (for bugs)
+- Expected vs. actual behavior
+- Screenshots (if applicable)
+
+---
+
+## 📚 Documentation
+
+- [Architecture Decisions](./docs/decisions/)
+- [User Stories](./docs/planning/user-stories.md)
+- [Roadmap](./docs/planning/roadmap.md)
+- [Technical Architecture](./docs/techinical/architecture.md)
+
+---
+
+## 🗺 Roadmap
+
+See our [roadmap](./docs/planning/roadmap.md) for planned features and timeline.
+
+### Upcoming Features
+
+- [ ] Food search and API integration
+- [ ] Natural language meal logging
+- [ ] Carbon footprint calculation
+- [ ] Interactive dashboards
+- [ ] Mobile app development
+
+---
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+---
 
-- Clerk for seamless authentication solutions
-- The React and Next.js communities for excellent documentation and tools
+## 👥 Authors
+
+**Your Name**
+
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+
+---
+
+## 🙏 Acknowledgments
+
+- [Clerk](https://clerk.com/) for seamless authentication
+- [Next.js](https://nextjs.org/) team for the amazing framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS
+- [Drizzle ORM](https://orm.drizzle.team/) for type-safe database queries
+- The open-source community for inspiration and tools
+
+---
+
+## 📊 Project Status
+
+**Current Status**: 🟡 In Development
+
+- ✅ Authentication system
+- ✅ UI/UX foundation
+- ✅ Project structure
+- 🚧 API integrations (in progress)
+- 🚧 Database schema (in progress)
+- ⏳ Carbon footprint tracking (planned)
+- ⏳ Advanced analytics (planned)
+
+---
+
+<div align="center">
+
+**Made with ❤️ and 🌱 for a healthier planet**
+
+[⬆ Back to Top](#-greenbites)
+
+</div>

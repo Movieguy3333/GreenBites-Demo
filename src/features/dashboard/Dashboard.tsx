@@ -30,8 +30,6 @@ function Dashboard() {
   const caloriesToday =
     user?.calorieHistory[user.calorieHistory.length - 1].caloriesToday;
 
-  console.log(user);
-
   // const user = useSelector((state: RootState) => state.user.user);
   const macroData = [
     { name: "Fat", value: user?.totalFats, color: "#ef4444" },
